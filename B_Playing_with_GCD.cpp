@@ -19,35 +19,27 @@ const int mod =         1000000007;
 typedef vector<long long> v;
 void solution()
 {
-    int n,known=0,unknown=0,flag=0;
+    int n;
     cin>>n;
-    v arr(n),aviary(n);
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
-        if(arr[i]==1){
-            unknown++;
-            flag++;
-            aviary[i]=flag;
-        }else{
-            known+=unknown;
-            unknown=0;
-            if(known==0)
-            {
-                aviary[i]=flag=0;
-            }
-            else{
-                aviary[i]=flag=(known/2)+1;
-            }
-            
+    v arr(n+2),ans;
+    loop0(0,n+2){
+        if(i==0||i==n+1)arr[i]=1;
+        else cin>>arr[i];
+    }
+    loop0(1,n+2){
+        ans.pb(lcm(arr[i],arr[i-1]));
+    }
+    loop0(1,n+1)
+    {
+        // cout<<ans[i]<<" ";
+        if(gcd(ans[i],ans[i-1])!=arr[i]){
+            no;
+            return;
         }
+        // cout<<gcd(ans[i],ans[i-1])<<" ";
     }
-    ll mx=0;
-    for(int i=0;i<n;i++){
-        mx=max(mx,aviary[i]);
-        // cout<<aviary[i]<<" ";
-    }
-    // cout<<mx<<endl;
-    printf("%lld\n",mx);
+    yes;
+    // cout<<endl;
 }
  
 int main()
