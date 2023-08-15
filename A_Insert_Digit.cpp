@@ -9,18 +9,21 @@ const int mod = 1000000007;
 typedef vector<int>v;
 void solution()
 {
-    int n;
-    cin>>n;
-    string str="";
-    for(int i=0;i<2*n-2;i++){
-        string s;
-        cin>>s;
-        if(str=="")str+=s;
-        else{
-            
+    string s,st;
+    ll digit,n;
+    int flag=0;
+    cin>>n>>digit>>s;
+    for(int i=0;i<n;i++){
+        
+        if(s[i]-'0'<digit&&flag==0){
+            st+=char(digit+'0');
+            flag=1;
         }
+        st+=s[i];
+    }
+    if(flag==0)st+=char(digit+'0');
+    cout<<st<<endl;
 
-    }   
 }
      
 int main()

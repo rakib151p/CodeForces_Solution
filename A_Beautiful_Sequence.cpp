@@ -11,16 +11,14 @@ void solution()
 {
     int n;
     cin>>n;
-    string str="";
-    for(int i=0;i<2*n-2;i++){
-        string s;
-        cin>>s;
-        if(str=="")str+=s;
-        else{
-            
-        }
-
-    }   
+    v arr(n);
+    bool f=false;
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+        if(arr[i]<=i+1)f=true;
+    }
+    if(!f)cout<<"NO"<<endl;
+    else cout<<"YES"<<endl;
 }
      
 int main()

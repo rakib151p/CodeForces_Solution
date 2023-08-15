@@ -11,16 +11,9 @@ void solution()
 {
     int n;
     cin>>n;
-    string str="";
-    for(int i=0;i<2*n-2;i++){
-        string s;
-        cin>>s;
-        if(str=="")str+=s;
-        else{
-            
-        }
-
-    }   
+    vector<int>v(n);
+    for(int i=0;i<n;i++)cin>>v[i];
+    cout<<v[n-1]-v[0]<<endl;
 }
      
 int main()

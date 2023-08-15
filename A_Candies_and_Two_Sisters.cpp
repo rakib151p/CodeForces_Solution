@@ -11,16 +11,11 @@ void solution()
 {
     int n;
     cin>>n;
-    string str="";
-    for(int i=0;i<2*n-2;i++){
-        string s;
-        cin>>s;
-        if(str=="")str+=s;
-        else{
-            
-        }
-
-    }   
+    if(n%2){
+        cout<<n/2<<endl;
+    }else{
+        cout<<n/2-1<<endl;
+    }
 }
      
 int main()

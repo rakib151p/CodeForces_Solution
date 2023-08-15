@@ -9,18 +9,14 @@ const int mod = 1000000007;
 typedef vector<int>v;
 void solution()
 {
-    int n;
-    cin>>n;
-    string str="";
-    for(int i=0;i<2*n-2;i++){
-        string s;
-        cin>>s;
-        if(str=="")str+=s;
-        else{
-            
-        }
-
-    }   
+    string s1="codeforces";
+    string s2;
+    cin>>s2;
+    int c=0;
+    for(int i=0;i<s1.size();i++){
+        if(s1[i]!=s2[i])c++;
+    }  
+    cout<<c<<endl;
 }
      
 int main()

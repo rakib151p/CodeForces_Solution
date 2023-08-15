@@ -11,22 +11,20 @@ void solution()
 {
     int n;
     cin>>n;
-    string str="";
-    for(int i=0;i<2*n-2;i++){
+    bool ans=false;
+    while(n--){
         string s;
         cin>>s;
-        if(str=="")str+=s;
-        else{
-            
-        }
-
-    }   
+        if(s=="and"||s=="not"||s=="that"||s=="the"||s=="you")ans=true;
+    }
+    if(ans==true)cout<<"Yes"<<endl;
+    else cout<<"No"<<endl;
 }
      
 int main()
 {
-    int t;
-    cin>>t;
+    int t=1;
+    //cin>>t;
     while(t--)
     {
         solution();

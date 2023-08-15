@@ -9,18 +9,12 @@ const int mod = 1000000007;
 typedef vector<int>v;
 void solution()
 {
-    int n;
-    cin>>n;
-    string str="";
-    for(int i=0;i<2*n-2;i++){
-        string s;
-        cin>>s;
-        if(str=="")str+=s;
-        else{
-            
-        }
-
-    }   
+    string s;
+    cin>>s;
+    map<char,int>mp;
+    for(int i=0;i<s.size();i++)mp[s[i]]++;   
+    if(mp.size()==1)cout<<-1<<endl;
+    else cout<<s.size()-1<<endl; 
 }
      
 int main()

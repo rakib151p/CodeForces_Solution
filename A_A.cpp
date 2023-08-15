@@ -9,24 +9,19 @@ const int mod = 1000000007;
 typedef vector<int>v;
 void solution()
 {
-    int n;
+    ll n;
     cin>>n;
-    string str="";
-    for(int i=0;i<2*n-2;i++){
-        string s;
-        cin>>s;
-        if(str=="")str+=s;
-        else{
-            
-        }
-
-    }   
+    if(n%2==0){
+        cout<<n/2<<endl;
+    }else{
+        cout<<n/2-n<<endl;
+    }
 }
      
 int main()
 {
-    int t;
-    cin>>t;
+    int t=1;
+    //cin>>t;
     while(t--)
     {
         solution();
